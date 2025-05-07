@@ -32,7 +32,7 @@ import com.drivetrue.PayHereHashGenerator;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:5173,https://drive-true-front-end.vercel.app/")
 public class OrderController {
     
     @Autowired
