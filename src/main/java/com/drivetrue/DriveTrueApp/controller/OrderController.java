@@ -46,7 +46,7 @@ public class OrderController {
      Order savedOrder =orderService.saveOrder(request);
 
      String merchantId = "1230226";
-     String merchantSecret = "MjkzMzMyNTE3NTQwMjM5OTU0OTkxMTYyNTIyODUzMTgxNjg5MzkwNw==";
+     String merchantSecret = "MjA2NTc3MTMzODMxNzI1MTY3NTQ0MTA2MTY0MzQzNTc0Mjg0NDc3";
      // if you have total amount
      String currency = "LKR";
      String orderId = savedOrder.getOrderId().toString();
