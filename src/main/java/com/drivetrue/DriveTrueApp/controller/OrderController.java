@@ -77,7 +77,7 @@ public List<Order> getOrders(){
 
 
 
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = {"http://localhost:5174","https://drive-true-dash-bord-hqcx.vercel.app/"})
 @GetMapping("/GetOrdersby/{states}")
 public List<Order> getOrderByStatus(@PathVariable Integer states)
 {
