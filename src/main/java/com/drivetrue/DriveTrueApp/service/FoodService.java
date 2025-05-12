@@ -48,6 +48,10 @@ public class FoodService {
             food.setDescription(request.getDescription());
         }
 
+         if(request.getPopular()!=null){
+            food.setPopular(request.getPopular());
+        }
+
         Category category = new Category();
 
         if(request.getCategory()!=null){
