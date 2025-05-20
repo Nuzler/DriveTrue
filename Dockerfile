@@ -1,18 +1,17 @@
-# Use Java 17 official image
-FROM eclipse-temurin:17-jdk as builder
+# Start with Java 17 JDK base image
+FROM eclipse-temurin:17-jdk
 
+# Set working directory
 WORKDIR /app
+
+# Copy everything to the container
 COPY . .
 
-# Use Maven wrapper or regular Maven
+# Build the app
 RUN ./mvnw clean package -DskipTests
 
-# Actual runtime image
-FROM eclipse-temurin:17-jdk
-WORKDIR /app
+# Expose port (Spring Boot default)
+EXPOSE 8080
 
-# Copy only the built jar from the builder image
-COPY --from=builder /app/target/*.jar app.jar
-
-# Run the Spring Boot app
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Run the JAR
+CMD ["java", "-jar", "target/DriveTrueApp-0.0.1-SNAPSHOT.jar"]
