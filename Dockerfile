@@ -7,13 +7,13 @@ WORKDIR /app
 # Copy everything to the container
 COPY . .
 
-# Build the app
-RUN ./mvnw clean package -DskipTests
-
-# 🔧 Make mvnw executable
+# ✅ Make mvnw executable BEFORE using it
 RUN chmod +x mvnw
 
-# Expose port (Spring Boot default)
+# ✅ Now build the app
+RUN ./mvnw clean package -DskipTests
+
+# Expose Spring Boot port
 EXPOSE 8080
 
 # Run the JAR
