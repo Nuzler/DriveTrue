@@ -1,11 +1,18 @@
-FROM maven:3.9.6-eclipse-temurin-17 AS build
+# Use Java 17 official image
+FROM eclipse-temurin:17-jdk as builder
+
 WORKDIR /app
 COPY . .
-RUN mvn clean package -DskipTests
 
-# Use a smaller image to run the app
-FROM eclipse-temurin:17
+# Use Maven wrapper or regular Maven
+RUN ./mvnw clean package -DskipTests
+
+# Actual runtime image
+FROM eclipse-temurin:17-jdk
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
-EXPOSE 8080
+
+# Copy only the built jar from the builder image
+COPY --from=builder /app/target/*.jar app.jar
+
+# Run the Spring Boot app
 ENTRYPOINT ["java", "-jar", "app.jar"]
