@@ -10,6 +10,9 @@ COPY . .
 # Build the app
 RUN ./mvnw clean package -DskipTests
 
+# 🔧 Make mvnw executable
+RUN chmod +x mvnw
+
 # Expose port (Spring Boot default)
 EXPOSE 8080
 
