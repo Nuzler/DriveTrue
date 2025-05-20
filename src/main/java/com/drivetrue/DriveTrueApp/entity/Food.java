@@ -28,6 +28,7 @@ public class Food {
     private Integer price;
     private String description;
     private String imageUrl;
+    private Integer popular;
 
     @ManyToOne
     @JoinColumn(name = "categoryId", nullable = false) 

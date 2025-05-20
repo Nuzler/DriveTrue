@@ -18,7 +18,7 @@ import com.drivetrue.DriveTrueApp.service.FoodService;
 
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:5174"} )
+@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:5174","https://drive-true-front-end.vercel.app/","https://drive-true-dash-bord-3zgw.vercel.app/"} )
 public class FoodControllor {
        
        @Autowired

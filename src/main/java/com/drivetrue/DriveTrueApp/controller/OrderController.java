@@ -32,7 +32,7 @@ import com.drivetrue.PayHereHashGenerator;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173","https://drive-true-front-end.vercel.app/","https://drive-true-dash-bord-hqcx.vercel.app/"})
 public class OrderController {
     
     @Autowired
@@ -77,7 +77,7 @@ public List<Order> getOrders(){
 
 
 
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = {"http://localhost:5174","https://drive-true-dash-bord-hqcx.vercel.app/"})
 @GetMapping("/GetOrdersby/{states}")
 public List<Order> getOrderByStatus(@PathVariable Integer states)
 {
