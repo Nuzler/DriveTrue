@@ -18,3 +18,4 @@ EXPOSE 8080
 
 # Run the JAR
 CMD ["java", "-jar", "target/DriveTrueApp-0.0.1-SNAPSHOT.jar"]
+

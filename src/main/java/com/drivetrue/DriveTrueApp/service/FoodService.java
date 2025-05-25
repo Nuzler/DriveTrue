@@ -68,4 +68,11 @@ public class FoodService {
 
         return foodRepository.findAllByCategory(category);
     }
+
+    public List<Food> getfoodbypopular(){
+
+        return foodRepository.getByPopular(2);
+    }
+
+
 }

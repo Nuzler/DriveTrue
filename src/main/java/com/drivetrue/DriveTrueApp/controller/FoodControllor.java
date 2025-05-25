@@ -54,6 +54,13 @@ public class FoodControllor {
         return foodservice.getfoodbycategory(categoryId);
     }
     
+
+    @GetMapping("/getpopularfood")
+    public List<Food> getfoodbypopular(){
+
+        return foodservice.getfoodbypopular();
+    }
+    
     
    
     
