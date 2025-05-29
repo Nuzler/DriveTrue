@@ -58,7 +58,7 @@ public class PaymentService {
                 </tbody>
             </table>
             <p style="margin-top: 20px; font-size: 16px;"><strong>Total:</strong> Rs. %s</p>
-            <p>http://localhost:5173/order-status?states=success&uuid=%s&&order_id=%s</p>
+            <p>https://travelerscafe.lk/order-status?states=success&uuid=%s&&order_id=%s</p>
             <p>See you soon at Travelers Cafe!</p>
         </div>
     </body>
