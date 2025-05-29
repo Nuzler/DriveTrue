@@ -55,6 +55,7 @@ public class OrderService {
         item.setFoodName(itemreq.getFoodName());
         item.setPrice(itemreq.getPrice());
         item.setQuantity(itemreq.getQuantity());
+        item.setImageUrl(itemreq.getImageUrl());
         
         orderItemRepository.save(item);
   

@@ -13,7 +13,7 @@ public class WebConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Allow all endpoints
 
-                    .allowedOrigins("https://your-frontend.vercel.app") // ✅ Use your actual Vercel frontend domain
+                    .allowedOrigins("") 
 
                     .allowedOrigins("*") // ✅ 
 
