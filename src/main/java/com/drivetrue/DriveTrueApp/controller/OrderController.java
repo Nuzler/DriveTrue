@@ -67,7 +67,7 @@ public class OrderController {
         return ResponseEntity.ok( response);
 }
 
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = "http://localhost:5174","https://drive-true-dash-bord-hqcx.vercel.app/")
 @GetMapping("/GetOrders")
 public List<Order> getOrders(){
     
