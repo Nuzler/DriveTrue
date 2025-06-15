@@ -67,7 +67,7 @@ public class OrderController {
         return ResponseEntity.ok( response);
 }
 
-@CrossOrigin(origins = "http://localhost:5174","https://drive-true-dash-bord-hqcx.vercel.app")
+@CrossOrigin(origins = {"http://localhost:5174","https://drive-true-dash-bord-hqcx.vercel.app"})
 @GetMapping("/GetOrders")
 public List<Order> getOrders(){
     
@@ -87,7 +87,7 @@ public List<Order> getOrderByStatus(@PathVariable Integer states)
 }
 
 
-@CrossOrigin(origins = "http://localhost:5174","https://drive-true-dash-bord-hqcx.vercel.app")
+@CrossOrigin(origins = {"http://localhost:5174","https://drive-true-dash-bord-hqcx.vercel.app"})
 @GetMapping("/GetOrderById/{orderId}")
 public Order getOrderById(@PathVariable Integer orderId){
 
