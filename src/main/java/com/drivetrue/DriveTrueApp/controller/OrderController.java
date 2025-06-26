@@ -67,7 +67,7 @@ public class OrderController {
         return ResponseEntity.ok( response);
 }
 
-@CrossOrigin(origins = {"http://localhost:5174"})
+@CrossOrigin(origins = {"http://localhost:5174","https://drive-true-dash-bord-3zgw.vercel.app/"})
 @GetMapping("/GetOrders")
 public List<Order> getOrders(){
     
@@ -77,7 +77,7 @@ public List<Order> getOrders(){
 
 
 
-@CrossOrigin(origins = {"http://localhost:5174"})
+@CrossOrigin(origins = {"http://localhost:5174","https://drive-true-dash-bord-3zgw.vercel.app/"})
 @GetMapping("/GetOrdersby/{states}")
 public List<Order> getOrderByStatus(@PathVariable Integer states)
 {
@@ -87,14 +87,14 @@ public List<Order> getOrderByStatus(@PathVariable Integer states)
 }
 
 
-@CrossOrigin(origins = {"http://localhost:5174"})
+@CrossOrigin(origins = {"http://localhost:5174","https://drive-true-dash-bord-3zgw.vercel.app/"})
 @GetMapping("/GetOrderById/{orderId}")
 public Order getOrderById(@PathVariable Integer orderId){
 
      return orderService.getOrderById(orderId);
 }
 
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = {"http://localhost:5174","https://drive-true-dash-bord-3zgw.vercel.app/"})
 @PutMapping("/orders/{orderId}/states")
 public Order changeStatus(@PathVariable Integer orderId,@RequestParam Integer states ){
 
@@ -102,7 +102,7 @@ public Order changeStatus(@PathVariable Integer orderId,@RequestParam Integer st
 
      return null;
 }
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = {"http://localhost:5174","https://drive-true-dash-bord-3zgw.vercel.app/"})
 @GetMapping("/Orders/{date}")
 public List<Order> getOrdersbyDate(@PathVariable LocalDate date){
 
