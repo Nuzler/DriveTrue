@@ -32,7 +32,7 @@ import com.drivetrue.PayHereHashGenerator;
 
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:5173","https://drive-true-front-end.vercel.app/","https://drive-true-dash-bord-hqcx.vercel.app/","https://travelerscafe.lk"})
+@CrossOrigin(origins = {"http://localhost:5173","https://drive-true-front-end.vercel.app","https://travelerscafe.lk","https://drive-true-dash-bord-3zgw.vercel.app"})
 public class OrderController {
     
     @Autowired
@@ -67,7 +67,7 @@ public class OrderController {
         return ResponseEntity.ok( response);
 }
 
-@CrossOrigin(origins = "http://localhost:5174")
+
 @GetMapping("/GetOrders")
 public List<Order> getOrders(){
     
@@ -77,7 +77,7 @@ public List<Order> getOrders(){
 
 
 
-@CrossOrigin(origins = {"http://localhost:5174","https://drive-true-dash-bord-hqcx.vercel.app/"})
+
 @GetMapping("/GetOrdersby/{states}")
 public List<Order> getOrderByStatus(@PathVariable Integer states)
 {
@@ -87,14 +87,14 @@ public List<Order> getOrderByStatus(@PathVariable Integer states)
 }
 
 
-@CrossOrigin(origins = "http://localhost:5174")
+
 @GetMapping("/GetOrderById/{orderId}")
 public Order getOrderById(@PathVariable Integer orderId){
 
      return orderService.getOrderById(orderId);
 }
 
-@CrossOrigin(origins = "http://localhost:5174")
+
 @PutMapping("/orders/{orderId}/states")
 public Order changeStatus(@PathVariable Integer orderId,@RequestParam Integer states ){
 
@@ -102,7 +102,7 @@ public Order changeStatus(@PathVariable Integer orderId,@RequestParam Integer st
 
      return null;
 }
-@CrossOrigin(origins = "http://localhost:5174")
+
 @GetMapping("/Orders/{date}")
 public List<Order> getOrdersbyDate(@PathVariable LocalDate date){
 
