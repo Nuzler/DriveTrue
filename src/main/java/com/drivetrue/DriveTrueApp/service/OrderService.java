@@ -44,7 +44,9 @@ public class OrderService {
        customer.setEmail(request.getCustomer().getEmail());
        customer.setPickupTime(request.getCustomer().getPickupTime());
        customer.setVehicle(request.getCustomer().getVehicle());
-       customer.setOrderTime(LocalDateTime.now());
+       ZoneId sriLankaZone = ZoneId.of("Asia/Colombo");
+        LocalDateTime colomboTime = ZonedDateTime.now(sriLankaZone).toLocalDateTime();
+        customer.setOrderTime(colomboTime);
        
        order.setCustomer(customer);
 
