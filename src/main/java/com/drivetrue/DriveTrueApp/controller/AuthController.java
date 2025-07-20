@@ -17,7 +17,7 @@ import com.drivetrue.DriveTrueApp.repository.UserRepository;
 
 @RestController
 @RequestMapping()
-@CrossOrigin(origins ={ "*","http://localhost:5174"})
+@CrossOrigin(origins ="*")
 public class AuthController {
        
     @Autowired
