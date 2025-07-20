@@ -22,6 +22,7 @@ public class OrderMapper {
           customer.setNumber(dto.getNumber());
           customer.setEmail(dto.getEmail());
           customer.setPickupTime(dto.getPickupTime());
+          customer.setOrderTime(dto.getOrderTime());
     
         return customer;
     
