@@ -44,6 +44,7 @@ public class OrderService {
        customer.setEmail(request.getCustomer().getEmail());
        customer.setPickupTime(request.getCustomer().getPickupTime());
        customer.setVehicle(request.getCustomer().getVehicle());
+       customer.setOrderTime(request.getCustomer().getOrderTime());
        order.setCustomer(customer);
 
        Order savedOrder=orderRepository.save(order);
