@@ -20,4 +20,5 @@ public class Customer {
     private int number;
     private String email;
     private LocalDateTime pickupTime;  
+    private LocalDateTime orderTime; 
 }
