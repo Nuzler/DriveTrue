@@ -29,7 +29,7 @@ public class PaymentService {
                 if ("2".equals(statusCode)) {
                     order.setStates(2);
                     orderRepository.save(order);
-                    System.out.println("Email:"+ order.getCustomer().getEmail() );
+                    System.out.println("Email:"+ order.getCustomer().getEmail());
                  
                    StringBuilder itemsHtml = new StringBuilder();
                 for (OrderItem item : order.getCartItems()) {
