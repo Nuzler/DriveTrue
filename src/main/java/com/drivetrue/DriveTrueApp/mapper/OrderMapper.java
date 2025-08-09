@@ -23,7 +23,8 @@ public class OrderMapper {
           customer.setEmail(dto.getEmail());
           customer.setPickupTime(dto.getPickupTime());
           customer.setOrderTime(dto.getOrderTime());
-    
+          customer.setPickupOption(dto.getPickupOption());
+          
         return customer;
     
       }
@@ -60,6 +61,7 @@ public class OrderMapper {
           cdto.setNumber(customer.getNumber());
           cdto.setEmail(customer.getEmail());
           cdto.setPickupTime(customer.getPickupTime());
+          cdto.setPickupOption(customer.getPickupOption());
 
 
         return cdto;
