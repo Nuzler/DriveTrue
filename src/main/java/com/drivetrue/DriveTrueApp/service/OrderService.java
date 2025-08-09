@@ -49,7 +49,7 @@ public class OrderService {
        ZoneId sriLankaZone = ZoneId.of("Asia/Colombo");
         LocalDateTime colomboTime = ZonedDateTime.now(sriLankaZone).toLocalDateTime();
         customer.setOrderTime(colomboTime);
-        customer.setPickupoption(request.getCustomer().getPickupoption());
+        customer.setPickupOption(request.getCustomer().getPickupOption());
        
        order.setCustomer(customer);
 
