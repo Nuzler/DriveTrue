@@ -13,6 +13,7 @@ public class CustomerDTO {
     private int number;
     private String email;
     private LocalDateTime pickupTime; 
-    private LocalDateTime orderTime; 
+    private LocalDateTime orderTime;
+    private String pickupOption;
 
 }
